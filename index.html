@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page</title>
+    <!-- Bootstrap CSS from CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-5VUVX2/X1s9M0JPL5zT5j8PLdzgX0bbyaSiZiP2FP8dzz3mpK5lf9zmxBt3+1x4a" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-4">Welcome to the Test Page</h1>
+        <p>This is a simple test page using modern web standards, Bootstrap 5, and basic interactivity with JavaScript. Resize the window to see how the layout adapts.</p>
+        
+        <div class="alert alert-info mt-4" id="infoAlert" style="display:none;">
+            Alert: This is a dynamically displayed message.
+        </div>
+
+        <button class="btn btn-primary mt-3" id="showAlertBtn">Show Alert</button>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper from CDN -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js" integrity="sha384-/bC5r+0f2NMzSG3ewHftOnz0/u2qQ9x3v19X7otGZJyINZZFNWRJj5gOtApPqTB1" crossorigin="anonymous"></script>
+    <script>
+        document.getElementById('showAlertBtn').addEventListener('click', () => {
+            const infoAlert = document.getElementById('infoAlert');
+            infoAlert.style.display = 'block';
+            setTimeout(() => {
+                infoAlert.style.display = 'none';
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
